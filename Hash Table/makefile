@@ -1,4 +1,4 @@
-# makefile for MP7
+# makefile 
 #
 # -lm is used to link in the math library
 # -Wall turns on all warning messages 
