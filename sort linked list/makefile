@@ -15,12 +15,17 @@
 #    <tab> last command
 #    <blank line>   -- the list of commands must end with a blank line
 
+test : llist.o ids_support.o test.o
+	gcc -Wall -g llist.o ids_support.o test.o -o test
 
 llist.o : llist.c datatypes.h llist.h
 	gcc -Wall -g -c llist.c
 
 ids_support.o : ids_support.c datatypes.h llist.h ids_support.h
 	gcc -Wall -g -c ids_support.c
+
+test.o : main.c datatypes.h llist.h ids_support.h
+	gcc -Wall -g -c test.c
 
 driver : driver.o llist.o ids_support.o
 	gcc -Wall -g llist.o ids_support.o driver.o -o driver
