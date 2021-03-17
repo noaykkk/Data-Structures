@@ -1,8 +1,3 @@
-/* Assumptions: The main function simply collects input commands and
- *              calls the appropriate ids function.
- *
- */
-
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
